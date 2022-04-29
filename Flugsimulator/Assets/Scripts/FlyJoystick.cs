@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FlyJoystick : MonoBehaviour
 {
-    public float speed = 20;
-    public float speedAmplifier = 20;
-    public float rotationSpeed = 20;
+    public float speed = 100;
+    public float speedAmplifier = 100;
+    public float rotationSpeed = 50;
     
 
     // Start is called before the first frame update
@@ -35,6 +35,7 @@ public class FlyJoystick : MonoBehaviour
          if (Input.GetAxis ("Throttle")>0){
              this.transform.Translate(Vector3.forward*speed*Time.deltaTime);
          }
+            Debug.Log("inputThrottle: " + inputThrottle);
 
     }
 }

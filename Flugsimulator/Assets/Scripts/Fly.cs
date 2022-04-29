@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fly : MonoBehaviour
 {
-    public float speed = 20;
+    public float speed = 100;
     // Start is called before the first frame update
     void Start()
     {

@@ -21,14 +21,15 @@ public class DisplayFlightData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textHeight.text =  transform.position.y.ToString();
-        textSpeed.text =  flyJoystick.speed.ToString();
+        textHeight.text =  "Alt: " + transform.position.y.ToString() + " m";
+        textSpeed.text = "Speed: " + (flyJoystick.speed*(-1)).ToString() + " km/h";
 
-        if(transform.position.y<warningHeight){
+        if(transform.position.y>warningHeight){
             warnImage.gameObject.SetActive(false);
         } else{
             warnImage.gameObject.SetActive(true);
         }
+          Debug.Log("Speed: " + flyJoystick.speed);
 
     }
 }
